@@ -42,7 +42,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
     testimonialsModalFunc();
 
   });
@@ -137,8 +136,9 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 // page navigation variables
+// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const pages = document.querySelectorAll("[data-page]");4
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -157,3 +157,19 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+(function() {
+  emailjs.init("v26-g8tpe558tbS4a");
+})();
+
+// Add event listener to the form
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  emailjs.sendForm('service_75g1xpa', 'template_ugpghrm', this)
+    .then(function() {
+      alert('Message sent successfully!');
+    }, function(error) {
+      alert('Failed to send message. Please try again later.');
+    });
+});
