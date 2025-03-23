@@ -159,17 +159,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 (function() {
-  emailjs.init("v26-g8tpe558tbS4a");
+  emailjs.init("rZMV7PSmFTCOC0Zju");
 })();
 
 // Add event listener to the form
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
   
-  emailjs.sendForm('service_75g1xpa', 'template_ugpghrm', this)
+  emailjs.sendForm('service_oh4p7zb', 'template_wifrgeg', this)
     .then(function() {
       alert('Message sent successfully!');
     }, function(error) {
       alert('Failed to send message. Please try again later.');
     });
 });
+
