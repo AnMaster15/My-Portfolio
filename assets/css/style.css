@@ -91,6 +91,19 @@
 
 }
 
+.quote-icon {
+  /* Example filter – adjust as needed */
+  filter: 
+    brightness(0) 
+    saturate(100%) 
+    invert(20%) 
+    sepia(100%) 
+    saturate(400%) 
+    hue-rotate(220deg) 
+    brightness(2) 
+    contrast(1);
+}
+
 
 
 
@@ -953,6 +966,26 @@ main {
   z-index: 1;
   transition: var(--transition-1);
 }
+
+
+.project-img img[src*="p16.jpeg"] {
+  width: 100% !important;
+  height: 150px !important; /* Adjust this height */
+  object-fit: cover;
+}
+
+.project-img img[src*="p17.jpeg"] {
+  width: 100% !important;
+  height: 150px !important; /* Adjust this height */
+  object-fit: cover;
+}
+
+.project-img img[src*="p18.jpeg"] {
+  width: 100% !important;
+  height: 150px !important; /* Adjust this height */
+  object-fit: cover;
+}
+
 
 .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
